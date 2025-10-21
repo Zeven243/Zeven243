@@ -1,55 +1,63 @@
-/* styles.css - Custom styles to enhance the portfolio */
+/* Custom styles to complement Tailwind CSS */
 
-/* Import Google Fonts if not already in HTML */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
+/* Global resets and enhancements */
 body {
     font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
+    scroll-behavior: smooth;
     line-height: 1.6;
 }
 
-/* Add smooth transitions to interactive elements */
-a:hover, button:hover {
-    transition: background-color 0.3s ease, color 0.3s ease;
+/* Section shadows for depth */
+section {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Enhance section headers */
-h2 {
-    position: relative;
-    padding-bottom: 0.5rem;
+/* Hover effects for interactive elements */
+a:hover {
+    transition: background-color 0.3s ease;
 }
 
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background-color: #3b82f6; /* Tailwind blue-500 */
+.bg-blue-500:hover {
+    background-color: #2563eb !important; /* Override Tailwind hover */
 }
 
-/* Card hover effects for projects and skills */
-.bg-gray-50:hover, .bg-white.p-4.rounded.shadow:hover {
+/* Project cards hover */
+.bg-gray-50:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Skill badges hover */
+.bg-white.p-4.rounded.shadow:hover {
+    background-color: #f3f4f6 !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Profile picture styles */
+.profile-pic {
+    width: 8rem; /* Equivalent to Tailwind's w-32 */
+    height: 8rem; /* Equivalent to h-32 */
+    border-radius: 9999px; /* rounded-full */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem; /* mb-4 */
+    border-width: 4px;
+    border-color: #ffffff; /* border-white */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .text-4xl {
-        font-size: 2.25rem; /* Adjust hero title for mobile */
+    h1.text-4xl {
+        font-size: 2.25rem; /* Smaller hero title on mobile */
     }
     .grid-cols-4 {
-        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Skills grid on mobile */
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2-column skills on mobile */
     }
 }
 
-/* Footer links hover */
-footer a:hover {
-    color: #93c5fd; /* Lighter blue for hover */
+/* Footer enhancements */
+footer {
+    margin-top: 2rem;
 }
