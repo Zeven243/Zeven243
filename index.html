@@ -5,26 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heinrich Engelbrecht - Junior Full Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-900 text-gray-200 antialiased">
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-200 antialiased transition-colors duration-300">
+    <!-- Navigation Bar -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold">Heinrich Engelbrecht</a>
+            <div class="space-x-6">
+                <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">About</a>
+                <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
+                <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+                <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400">Experience</a>
+                <a href="#education" class="hover:text-blue-600 dark:hover:text-blue-400">Education</a>
+                <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+            </div>
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="focus:outline-none">
+                <span class="sr-only">Toggle Dark Mode</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <header class="bg-gradient-to-r from-purple-900 to-blue-900 text-white py-20 text-center">
+    <header id="hero" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-32 text-center">
         <div class="container mx-auto px-4">
-            <img src="Propic.jpg" alt="Heinrich Engelbrecht Profile Picture" class="profile-pic">
-            <h1 class="text-5xl font-orbitron font-bold mb-2 glitch" data-text="Heinrich (Hein) Engelbrecht">Heinrich (Hein) Engelbrecht</h1>
-            <p class="text-2xl font-orbitron mb-4 neon-cyan">Junior Full Stack Developer | Python & Laravel Specialist</p>
-            <p class="mb-6 text-lg">Self-taught developer with 10+ years in IT support, pursuing BSc in Computer Science. Passionate about building efficient web applications.</p>
-            <a href="mailto:hein.engelbrecht2403@gmail.com" class="bg-cyan-500 hover:bg-cyan-600 text-gray-900 font-bold py-2 px-4 rounded neon-button">Contact Me</a>
-            <a href="https://github.com/Zeven243" class="ml-4 bg-purple-500 hover:bg-purple-600 text-gray-900 font-bold py-2 px-4 rounded neon-button" target="_blank">GitHub</a>
+            <img src="Propic.jpg" alt="Heinrich Engelbrecht Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white shadow-lg">
+            <h1 class="text-5xl font-bold mb-4">Heinrich (Hein) Engelbrecht</h1>
+            <p class="text-2xl mb-6">Junior Full Stack Developer | Python & Laravel Specialist</p>
+            <p class="mb-8 max-w-2xl mx-auto">Self-taught developer with 10+ years in IT support, pursuing BSc in Computer Science. Passionate about building efficient web applications.</p>
+            <a href="mailto:hein.engelbrecht2403@gmail.com" class="bg-white text-blue-600 hover:bg-gray-100 py-3 px-6 rounded-full font-semibold shadow-md">Contact Me</a>
+            <a href="https://github.com/Zeven243" class="ml-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 py-3 px-6 rounded-full font-semibold" target="_blank">GitHub</a>
         </div>
     </header>
 
     <!-- About Section -->
-    <section class="py-16 bg-gray-800">
+    <section id="about" class="py-20 bg-white dark:bg-gray-800">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-orbitron font-bold mb-8 text-center neon-purple">About Me</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
             <p class="max-w-3xl mx-auto text-lg leading-relaxed">
                 With over 10 years of hands-on IT experience, I'm transitioning into software development. Currently in my 2nd year of a BSc in Computer Science at University of the People, I'm skilled in full-stack technologies like Laravel, Python, and Vue.js. My background in troubleshooting networks, hardware, and software gives me a unique edge in building reliable applications. I'm a fast learner, team player, and fluent in English and Afrikaans.
             </p>
@@ -32,119 +54,168 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="py-16 bg-gray-900">
+    <section id="skills" class="py-20 bg-gray-100 dark:bg-gray-900">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-orbitron font-bold mb-8 text-center neon-cyan">Skills</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center">Skills</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Python</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Laravel (PHP)</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Vue.js</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">SQL & SQLite</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Tailwind CSS</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Bootstrap</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">RESTful APIs</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Flask</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Selenium WebDriver</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Beautiful Soup</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Pandas & NumPy</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Tkinter</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">HTML, CSS, JavaScript</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Networking (CompTIA Network+)</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">Windows Server & Active Directory</div>
-                <div class="bg-gray-800 p-4 rounded shadow text-center hover:neon-glow-cyan transition-all">IT Troubleshooting</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Python</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Laravel (PHP)</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Vue.js</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">SQL & SQLite</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Tailwind CSS</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Bootstrap</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">RESTful APIs</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Flask</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Selenium WebDriver</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Beautiful Soup</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Pandas & NumPy</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Tkinter</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">HTML, CSS, JavaScript</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Networking (CompTIA Network+)</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">Windows Server & Active Directory</div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow">IT Troubleshooting</div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="py-16 bg-gray-800">
+    <section id="projects" class="py-20 bg-white dark:bg-gray-800">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-orbitron font-bold mb-8 text-center neon-purple">Projects</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center">Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-900 p-6 rounded shadow hover:neon-glow-purple transition-all">
-                    <h3 class="text-xl font-orbitron font-semibold mb-2 neon-cyan">Gordon Ramsay Discord Bot</h3>
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2">Gordon Ramsay Discord Bot</h3>
                     <p class="mb-4">A fun Python-based bot that responds with Gordon Ramsay-style insults and advice for Discord servers.</p>
-                    <p class="text-sm text-gray-400">Technologies: Python</p>
-                    <a href="https://github.com/Zeven243/G-Ramsay-bot" class="text-cyan-400 hover:underline" target="_blank">View on GitHub</a>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Technologies: Python</p>
+                    <a href="https://github.com/Zeven243/G-Ramsay-bot" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank">View on GitHub</a>
                 </div>
-                <div class="bg-gray-900 p-6 rounded shadow hover:neon-glow-purple transition-all">
-                    <h3 class="text-xl font-orbitron font-semibold mb-2 neon-cyan">Zoepa Website</h3>
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2">Zoepa Website</h3>
                     <p class="mb-4">Recreated a local online radio station's website for a more professional look, as a portfolio project.</p>
-                    <p class="text-sm text-gray-400">Technologies: Flask, Bootstrap, HTML</p>
-                    <a href="https://github.com/Zeven243/Zoepa-Website" class="text-cyan-400 hover:underline" target="_blank">View on GitHub</a>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Technologies: Flask, Bootstrap, HTML</p>
+                    <a href="https://github.com/Zeven243/Zoepa-Website" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank">View on GitHub</a>
                 </div>
-                <div class="bg-gray-900 p-6 rounded shadow hover:neon-glow-purple transition-all">
-                    <h3 class="text-xl font-orbitron font-semibold mb-2 neon-cyan">Rafflit</h3>
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2">Rafflit</h3>
                     <p class="mb-4">A Vue.js application for managing raffles or giveaways (details can be expanded here).</p>
-                    <p class="text-sm text-gray-400">Technologies: Vue.js</p>
-                    <a href="https://github.com/Zeven243/Rafflit" class="text-cyan-400 hover:underline" target="_blank">View on GitHub</a>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Technologies: Vue.js</p>
+                    <a href="https://github.com/Zeven243/Rafflit" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank">View on GitHub</a>
                 </div>
-                <div class="bg-gray-900 p-6 rounded shadow hover:neon-glow-purple transition-all">
-                    <h3 class="text-xl font-orbitron font-semibold mb-2 neon-cyan">Java Multi-User Chat App</h3>
+                <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2">Java Multi-User Chat App</h3>
                     <p class="mb-4">A socket-based chat server with multi-client support, user auth (login/register), and SQLite for logs and accounts.</p>
-                    <p class="text-sm text-gray-400">Technologies: Java, Sockets, SQLite, Multithreading</p>
-                    <a href="https://github.com/Zeven243/Java-Chat-App" class="text-cyan-400 hover:underline" target="_blank">View on GitHub</a>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Technologies: Java, Sockets, SQLite, Multithreading</p>
+                    <a href="https://github.com/Zeven243/Java-Chat-App" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank">View on GitHub</a>
                 </div>
-                <!-- Add more projects here as you build them -->
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section class="py-16 bg-gray-900">
+    <section id="experience" class="py-20 bg-gray-100 dark:bg-gray-900">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-orbitron font-bold mb-8 text-center neon-cyan">Professional Experience</h2>
-            <div class="space-y-8">
-                <div>
-                    <h3 class="text-xl font-orbitron font-semibold neon-purple">Site IT Contractor - TTEC Digital (2024 - Present)</h3>
-                    <p>Provide remote and onsite IT support, including hardware/software setup, network troubleshooting, Office 365, Active Directory, and printer maintenance.</p>
+            <h2 class="text-4xl font-bold mb-12 text-center">Professional Experience</h2>
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row items-start">
+                    <div class="md:w-1/4 text-right pr-8">
+                        <h3 class="text-xl font-semibold">Site IT Contractor - TTEC Digital</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">2024 - Present</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p>Provide remote and onsite IT support, including hardware/software setup, network troubleshooting, Office 365, Active Directory, and printer maintenance.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-orbitron font-semibold neon-purple">IT Technician - Electronic Laboratory Services (2019 - 2022)</h3>
-                    <p>Handled IT support for medical labs, configured analyzers, set up networks, and managed tickets. Rotated after-hours support.</p>
+                <div class="flex flex-col md:flex-row items-start">
+                    <div class="md:w-1/4 text-right pr-8">
+                        <h3 class="text-xl font-semibold">IT Technician - Electronic Laboratory Services</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">2019 - 2022</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p>Handled IT support for medical labs, configured analyzers, set up networks, and managed tickets. Rotated after-hours support.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-orbitron font-semibold neon-purple">IT Support Technician - Food Lover's Market (2018 - 2019)</h3>
-                    <p>Helpdesk support for retail stores, resolving POS and technical issues.</p>
+                <div class="flex flex-col md:flex-row items-start">
+                    <div class="md:w-1/4 text-right pr-8">
+                        <h3 class="text-xl font-semibold">IT Support Technician - Food Lover's Market</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">2018 - 2019</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p>Helpdesk support for retail stores, resolving POS and technical issues.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-orbitron font-semibold neon-purple">1st Line IT Analyst - Computacenter (2016 - 2018)</h3>
-                    <p>Managed Active Directory, mailboxes, software installs, and ticket requests using Citrix and ITSM tools.</p>
+                <div class="flex flex-col md:flex-row items-start">
+                    <div class="md:w-1/4 text-right pr-8">
+                        <h3 class="text-xl font-semibold">1st Line IT Analyst - Computacenter</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">2016 - 2018</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p>Managed Active Directory, mailboxes, software installs, and ticket requests using Citrix and ITSM tools.</p>
+                    </div>
                 </div>
-                <!-- Summarized earlier roles for brevity; add more if needed -->
             </div>
         </div>
     </section>
 
     <!-- Education & Certifications Section -->
-    <section class="py-16 bg-gray-800">
+    <section id="education" class="py-20 bg-white dark:bg-gray-800">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-orbitron font-bold mb-8 text-center neon-purple">Education & Certifications</h2>
-            <div class="space-y-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">Education & Certifications</h2>
+            <div class="space-y-8">
                 <div>
-                    <h3 class="text-xl font-orbitron font-semibold neon-cyan">BSc Computer Science - University of the People (2nd Year, Ongoing)</h3>
+                    <h3 class="text-xl font-semibold">BSc Computer Science - University of the People</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">2nd Year, Ongoing</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-orbitron font-semibold neon-cyan">CompTIA Network+ Certified</h3>
+                    <h3 class="text-xl font-semibold">CompTIA Network+ Certified</h3>
                 </div>
                 <div>
-                    <h3 class="text-xl font-orbitron font-semibold neon-cyan">CompTIA A+ Certified</h3>
+                    <h3 class="text-xl font-semibold">CompTIA A+ Certified</h3>
                 </div>
                 <div>
-                    <h3 class="text-xl font-orbitron font-semibold neon-cyan">NQF Level 4 - Senior Certificate</h3>
+                    <h3 class="text-xl font-semibold">NQF Level 4 - Senior Certificate</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <footer class="bg-gradient-to-r from-purple-900 to-blue-900 text-white py-8 text-center">
-        <div class="container mx-auto px-4">
-            <p class="text-lg mb-2 font-orbitron">Get in Touch</p>
-            <p>Email: <a href="mailto:hein.engelbrecht2403@gmail.com" class="text-cyan-400 hover:underline">hein.engelbrecht2403@gmail.com</a></p>
-            <p>Phone: (+27) 069 720 8308</p>
-            <p class="mt-4 text-sm">&copy; 2025 Heinrich Engelbrecht. All rights reserved.</p>
+    <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12">Get in Touch</h2>
+            <p class="mb-8">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <p class="text-lg mb-2">Email: <a href="mailto:hein.engelbrecht2403@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">hein.engelbrecht2403@gmail.com</a></p>
+            <p class="text-lg mb-8">Phone: (+27) 069 720 8308</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://github.com/Zeven243" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <!-- Add more social links if needed -->
+            </div>
         </div>
+    </section>
+
+    <footer class="bg-gray-800 dark:bg-gray-800 text-white py-6 text-center">
+        <p>&copy; 2025 Heinrich Engelbrecht. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Theme Toggle
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+        });
+
+        // Smooth Scrolling for Nav Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
